@@ -13,25 +13,26 @@ import { CrudComponent } from './pages/crud/crud.component';
 
 
 export const routes: Routes = [
-  {path:'',component:NavBarComponent,
-   children:[
-    {path:'home',component:HomeComponent},
-    {path:'login', component:LoginComponent},
-    {path:'about', component:AbaoutComponent},
-    {path:'contact', component:ContactComponent},
-    {path:'register', component:RegisterComponent},
-    {path:'hardware', component:HardwareComponent},
-    {path:'software', component:SoftwareComponent},
-    { path: '', redirectTo: '/home', pathMatch: 'full' }
+  {
+    path: '', component: NavBarComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'about', component: AbaoutComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'hardware', component: HardwareComponent },
+      { path: 'software', component: SoftwareComponent },
+      { path: '', redirectTo: '/home', pathMatch: 'full' }
 
-   ]
+    ]
   },
 
-      {path:'courses',component:CoursesComponent},
-      {path:'crud',component:CrudComponent},
+  { path: 'courses', component: CoursesComponent },
+  { path: 'crud', component: CrudComponent },
 
 
-  { path: '**', redirectTo: '/home'}
+  { path: '**', redirectTo: '/home' }
 
 
 ];
